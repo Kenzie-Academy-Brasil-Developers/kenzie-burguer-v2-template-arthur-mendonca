@@ -9,11 +9,9 @@ const SearchForm = () => {
   const { searchValue, setSearchValue, setSearchResult, products } =
     useContext(CartContext);
 
-  // variável searchValue contém o valor inserido no input de busca
-
-  function submit(event: React.FormEvent<HTMLFormElement>) {
+  function submit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    console.log(searchValue);
+
     const filteredFood = products.filter((food: iSearchResult) => {
       return (
         food.name.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -21,7 +19,7 @@ const SearchForm = () => {
       );
     });
     setSearchResult(filteredFood);
-    console.log(filteredFood);
+
     setSearchValue("");
   }
 

@@ -29,7 +29,6 @@ function CartProvider({ children }: iProductsProps) {
             authorization: ` Bearer ${token}`,
           },
         });
-        console.log(response.data);
         setProducts(response.data);
       } catch (error) {
         console.log(error);
@@ -37,7 +36,7 @@ function CartProvider({ children }: iProductsProps) {
     }
     getProducts();
   }, []);
-  // console.log(products);
+
   return (
     <>
       <CartContext.Provider

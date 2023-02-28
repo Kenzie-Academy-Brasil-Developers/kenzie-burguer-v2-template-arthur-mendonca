@@ -25,11 +25,10 @@ export interface iProductsResponse {
   price: number;
   img: string;
   product: any;
-}
-
-export interface iSearchResult extends iProductsResponse {
   length: number;
 }
+
+export interface iSearchResult extends iProductsResponse {}
 
 export interface iCartItens extends iProductsResponse {}
 
