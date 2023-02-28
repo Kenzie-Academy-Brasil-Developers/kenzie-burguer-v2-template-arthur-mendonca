@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute/protectedRoute';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ShopPage from './pages/ShopPage';
@@ -8,7 +9,9 @@ const Router = () => {
     <Routes>
       <Route path='/' element={<LoginPage />} />
       <Route path='/register' element={<RegisterPage />} />
-      <Route path='/shop' element={<ShopPage />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path='/shop' element={<ShopPage />} />
+      </Route>
     </Routes>
   );
 };
