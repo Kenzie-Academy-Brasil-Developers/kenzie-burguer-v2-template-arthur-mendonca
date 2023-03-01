@@ -1,3 +1,12 @@
+import { FieldError, UseFormRegister } from "react-hook-form";
+
+export interface iInputProps {
+  label: string;
+  register: UseFormRegister<FieldValues>;
+  errors?: FieldError | null | undefined;
+  type: "text" | "email" | "password";
+}
+
 export interface iProviderProps {
   children: React.ReactNode;
 }

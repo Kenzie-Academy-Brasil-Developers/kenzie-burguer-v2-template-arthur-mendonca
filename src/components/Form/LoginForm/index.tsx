@@ -27,13 +27,13 @@ const LoginForm = () => {
       <Input
         label="E-mail"
         type="email"
-        register={register("email")}
+        register={register<string>("email")}
         errors={errors.email?.message}
       />
       <Input
         label="Senha"
         type="password"
-        register={register("password")}
+        register={register<string>("password")}
         errors={errors.password?.message}
       />
       <StyledButton $buttonSize="default" $buttonStyle="green" type="submit">

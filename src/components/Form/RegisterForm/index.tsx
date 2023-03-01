@@ -27,24 +27,24 @@ const RegisterForm = () => {
       <Input
         type="text"
         label="Nome"
-        register={register("name")}
+        register={register<string>("name")}
         errors={errors.name?.message}
       />
       <Input
         type="email"
         label="Seu e-mail"
-        register={register("email")}
+        register={register<string>("email")}
         errors={errors.email?.message}
       />
       <Input
         type="password"
         label="Inserir senha"
-        register={register("password")}
+        register={register<string>("password")}
         errors={errors.password?.message}
       />
       <Input
         label="Repetir senha"
-        register={register("passwordConfirm")}
+        register={register<string>("passwordConfirm")}
         errors={errors.passwordConfirm?.message}
       />
       <StyledButton $buttonSize="default" $buttonStyle="gray" type="submit">
