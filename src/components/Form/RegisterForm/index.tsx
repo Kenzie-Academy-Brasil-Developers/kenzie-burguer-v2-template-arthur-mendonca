@@ -21,7 +21,9 @@ const RegisterForm = () => {
     formState: { errors },
   } = useForm<iInputProps>({ resolver: yupResolver(formSchema) });
 
-  const submit: SubmitHandler<iFormRegisterNewUser> = (formData) => {
+  const submit: SubmitHandler<iFormRegisterNewUser> = (
+    formData: iInputProps
+  ) => {
     userRegister(formData);
   };
 
@@ -30,23 +32,27 @@ const RegisterForm = () => {
       <Input
         type="text"
         label="Nome"
+        name="name"
         register={register("name")}
         errors={errors.name?.message}
       />
       <Input
         type="email"
         label="Seu e-mail"
+        name="email"
         register={register("email")}
         errors={errors.email?.message}
       />
       <Input
         type="password"
         label="Inserir senha"
+        name="password"
         register={register("password")}
         errors={errors.password?.message}
       />
       <Input
         label="Repetir senha"
+        name="passwordConfirm"
         register={register("passwordConfirm")}
         errors={errors.passwordConfirm?.message}
       />

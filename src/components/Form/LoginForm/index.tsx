@@ -18,7 +18,7 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<iInputProps>({ resolver: yupResolver(formSchema) });
 
-  const submit: SubmitHandler<iLoginUser> = (formData) => {
+  const submit: SubmitHandler<iLoginUser> = (formData: iInputProps) => {
     loginUser(formData);
   };
 
@@ -27,11 +27,13 @@ const LoginForm = () => {
       <Input
         label="E-mail"
         type="email"
+        name="email"
         register={register("email")}
         errors={errors.email?.message}
       />
       <Input
         label="Senha"
+        name="password"
         type="password"
         register={register("password")}
         errors={errors.password?.message}
