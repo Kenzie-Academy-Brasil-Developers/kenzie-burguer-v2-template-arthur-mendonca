@@ -1,9 +1,14 @@
-import { FieldError, UseFormRegister } from "react-hook-form";
+import {
+  FieldError,
+  UseFormRegister,
+  FieldValues,
+  UseFormRegisterReturn,
+} from "react-hook-form";
 
 export interface iInputProps {
   label: string;
-  register: UseFormRegister<FieldValues>;
-  errors?: FieldError | null | undefined;
+  register: UseFormRegisterReturn<string>;
+  errors?: FieldError | null;
   type: "text" | "email" | "password";
 }
 
