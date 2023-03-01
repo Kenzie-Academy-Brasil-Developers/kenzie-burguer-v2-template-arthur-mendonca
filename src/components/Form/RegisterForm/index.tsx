@@ -30,7 +30,7 @@ const RegisterForm = () => {
       <Input
         type="text"
         label="Nome"
-        register={register("name" as const)}
+        register={register("name")}
         errors={errors.name?.message}
       />
       <Input

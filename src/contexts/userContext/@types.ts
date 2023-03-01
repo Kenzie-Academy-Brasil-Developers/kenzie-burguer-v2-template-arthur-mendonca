@@ -9,7 +9,11 @@ export interface iInputProps {
   label: string;
   register: UseFormRegisterReturn<string>;
   errors?: FieldError | null;
-  type: "text" | "email" | "password";
+  type: "text" | "email" | "password",
+  name: string;
+  email: string,
+  password: string,
+  passwordConfirm: string
 }
 
 export interface iProviderProps {
