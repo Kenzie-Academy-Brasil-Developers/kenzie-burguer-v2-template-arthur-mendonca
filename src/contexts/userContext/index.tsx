@@ -37,7 +37,6 @@ function UserProvider({ children }: iProviderProps) {
       console.log(error);
       localStorage.removeItem("@token");
       isAxiosError;
-
     }
   }
 
