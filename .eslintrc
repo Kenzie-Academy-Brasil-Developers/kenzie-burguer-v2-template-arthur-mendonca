@@ -1,5 +1,5 @@
 {
-  "no-use-before-define": "off",
+  "no-use-before-define": "on",
   "env": {
     "browser": true,
     "es2021": true
