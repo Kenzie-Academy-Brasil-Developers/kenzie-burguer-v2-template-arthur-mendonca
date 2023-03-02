@@ -16,9 +16,9 @@ const LoginForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<iInputProps>({ resolver: yupResolver(formSchema) });
+  } = useForm<iLoginUser>({ resolver: yupResolver(formSchema) });
 
-  const submit: SubmitHandler<iLoginUser> = (formData: iInputProps) => {
+  const submit: SubmitHandler<iLoginUser> = (formData) => {
     loginUser(formData);
   };
 

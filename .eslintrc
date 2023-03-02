@@ -1,4 +1,4 @@
-{
+{ "root": true,
   "no-use-before-define": "on",
   "env": {
     "browser": true,

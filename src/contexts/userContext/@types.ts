@@ -8,12 +8,8 @@ import {
 export interface iInputProps {
   label: string;
   register: UseFormRegisterReturn<string>;
-  errors?: FieldError | null;
-  type: "text" | "email" | "password",
-  name: string;
-  email: string,
-  password: string,
-  passwordConfirm: string
+  error?: FieldError;
+  type: "text" | "email" | "password" | "passwordConfirm";
 }
 
 export interface iProviderProps {
@@ -30,10 +26,10 @@ export interface iCreateUserResponse {
 }
 
 export interface iFormRegisterNewUser {
+  name: string;
   email: string;
   password: string;
   passwordConfirm: string;
-  name: string;
 }
 
 export interface iLoginUser {
