@@ -19,7 +19,7 @@ const RegisterForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<iInputProps>({ resolver: yupResolver(formSchema) });
+  } = useForm<iFormRegisterNewUser>({ resolver: yupResolver(formSchema) });
 
   const submit: SubmitHandler<iFormRegisterNewUser> = (formData) => {
     userRegister(formData);
@@ -31,25 +31,25 @@ const RegisterForm = () => {
         type="text"
         label="Nome"
         register={register("name")}
-        errors={errors.name?.message}
+        error={errors.name}
       />
       <Input
         type="email"
         label="Seu e-mail"
         register={register("email")}
-        errors={errors.email?.message}
+        error={errors.email}
       />
       <Input
         type="password"
         label="Inserir senha"
         register={register("password")}
-        errors={errors.password?.message}
+        error={errors.password}
       />
       <Input
         label="Repetir senha"
         type="passwordConfirm"
         register={register("passwordConfirm")}
-        errors={errors.passwordConfirm?.message}
+        error={errors.passwordConfirm}
       />
       <StyledButton $buttonSize="default" $buttonStyle="gray" type="submit">
         Cadastrar

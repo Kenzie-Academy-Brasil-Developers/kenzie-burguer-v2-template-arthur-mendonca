@@ -1,9 +1,3 @@
-import {
-  appendErrors,
-  FieldError,
-  FieldValues,
-  UseFormRegister,
-} from "react-hook-form";
 import { iInputProps } from "../../../contexts/userContext/@types";
 import { StyledTextField } from "../../../styles/form";
 import { StyledParagraph } from "../../../styles/typography";
@@ -17,9 +11,9 @@ const Input = ({ label, error, register, type }: iInputProps) => {
         {...register}
         // errors={errors?.message}
       />
-      {error && (
-        <StyledParagraph fontColor="red">{error.message}</StyledParagraph>
-      )}
+      {error ? (
+        <StyledParagraph fontColor="red"> {error.message}</StyledParagraph>
+      ) : null}
     </fieldset>
   );
 };
