@@ -5,7 +5,6 @@ import ReactDOM from "react-dom/client";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
 import UserProvider from "./contexts/userContext";
-import Providers from "./providers";
 import CartProvider from "./contexts/cartContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
