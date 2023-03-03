@@ -19,9 +19,7 @@ function UserProvider({ children }: iProviderProps) {
   async function userRegister(formData: iFormRegisterNewUser) {
     try {
       const response = await api.post("/users", formData);
-      console.log(response);
       navigate("/");
-      // TOKEN DE SUCESSO
     } catch (error) {
       console.log(error);
     }

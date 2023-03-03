@@ -25,12 +25,9 @@ const ProductCard = () => {
       setCartItens((prevItens) => [...prevItens, foundFood]);
       setBuyValue(buyValue + foundFood.price);
     }
-    console.log(cartItens);
-    console.log(buyValue);
   }
   return (
     <>
-      {/* O products é uma promise da API, então, pra ele ser devidamente renderizado, eu posso usar uma renderização condicional ( && ) ou declarar que seu tipo é de início um array vazio. */}
       {searchResult.length !== 0
         ? searchResult.map((product: iSearchResult) => (
             <StyledProductCard key={product.id}>

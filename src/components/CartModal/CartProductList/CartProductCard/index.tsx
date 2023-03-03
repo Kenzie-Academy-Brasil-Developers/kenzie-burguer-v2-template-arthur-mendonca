@@ -13,7 +13,6 @@ const CartProductCard = () => {
     const deleted = cartItens.find((food) => food.id === id);
     setCartItens(filtered);
     setBuyValue(buyValue - deleted!?.price);
-    // console.log(buyValue);
   }
 
   return cartItens.map((food) => (

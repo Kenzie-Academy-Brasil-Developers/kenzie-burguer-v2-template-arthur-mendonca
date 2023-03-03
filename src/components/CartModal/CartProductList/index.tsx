@@ -17,7 +17,6 @@ const CartProductList = () => {
   return (
     <StyledCartProductList>
       <ul>{CartProductCard()}</ul>
-      {/* Isto é um componente */}
       <div className="totalBox">
         <StyledParagraph>
           <strong>Total</strong>

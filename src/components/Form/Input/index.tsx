@@ -5,12 +5,7 @@ import { StyledParagraph } from "../../../styles/typography";
 const Input = ({ label, error, register, type }: iInputProps) => {
   return (
     <fieldset>
-      <StyledTextField
-        type={type}
-        label={label}
-        {...register}
-        // errors={errors?.message}
-      />
+      <StyledTextField type={type} label={label} {...register} />
       {error ? (
         <StyledParagraph fontColor="red"> {error.message}</StyledParagraph>
       ) : null}
