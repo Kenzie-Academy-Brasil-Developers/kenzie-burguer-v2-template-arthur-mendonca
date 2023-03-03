@@ -7,7 +7,6 @@ import {
   iSearchResult,
   iCartItens,
 } from "./@types";
-import axios from "axios";
 import { api } from "../../services/request";
 
 export const CartContext = createContext({} as iProductsContext);
